@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="xdd" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Database</title>
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/main.css" rel="stylesheet">
+    <style>    
+  
+.menu{    
+    width:100%;  
+    z-index:1;  
+}    
+.menuFixed{    
+    position:fixed;    
+    top:0;    
+    left:0;  
+}    
+#menu_wrap{    
+    height:50px;    
+    width:100%;    
+}    
+  
+</style>    
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--<script src="../../assets/js/ie-emulation-modes-warning.js"></script>-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-spy="scroll" data-target="#scroll-listen-top-nav">
+
+    <!-- Fixed navbar -->
+    
+    <nav id="second-background"  class="navbar navbar-default">
+        <div class="container">
+        	<div class="container">
+					<div class="row">
+						<!-- Logo -->
+						<div id="logo" class="col-lg-3 col-md-3 col-sm-3">
+							<a href="#"><img src="../imgs/top-background.jpg" alt="Logo"></a>
+						</div>
+						<!-- Logo -->
+						<div id="discribe" class="col-lg-5 col-md-4 col-sm-4">
+							<p>say something to describe this website! </p>
+						</div>
+						<div id="search" class="col-lg-4 col-md-5 col-sm-5">
+							
+							<form action="" method="get" name="" class="form-inline" id="searchform">
+								<div class="form-group">
+			                    	<input type="text" class="form-control" name="" id="searchBar"value="" placeholder="Search by ID">
+			                    	<button type="submit" class="btn btn-primary" id="searchButton">Go</button>
+			                    </div>
+			              </form>
+						</div>
+						<!-- /Newsletter -->
+						
+						
+						
+					</div>
+					
+					</div>
+        </div>
+    	</div> <!-- /container -->
+    </nav>
+
+    <div id='menu_wrap'>    
+        <div class='menu'>    
+            <div id="lower-header">
+					
+					<div class="container">
+					
+					<div id="menu-button">
+						<div>
+						<span></span>
+						<span></span>
+						<span></span>
+						</div>
+						<span>Menu</span>
+					</div>
+					
+					<ul id="navigation" style="">
+						
+						<!-- Home -->
+						<li class="home-button current-menu-item">
+						
+							<a href="main-v1.html"><i class="icons icon-home"></i></a>
+							
+							<ul>
+							
+								<li>
+									<span>Layouts</span>
+									<ul>
+										<li><a href="main-v1.html">Home v1</a></li>
+										<li><a href="main-v2.html">Home v2</a></li>
+										<li><a href="main-v3.html">Home v3</a></li>
+									</ul>
+								<div class="dropdown-button"></div></li>
+								
+								<li>
+									<span>Sliders</span>
+									<ul>
+										<li><a href="main-v1.html">Flexslider</a></li>
+										<li><a href="main-v2.html">Revolution</a></li>
+									</ul>
+								<div class="dropdown-button"></div></li>
+								
+							</ul>
+							
+						<div class="dropdown-button"></div></li>
+						<!-- /Home -->
+						
+						<!-- Pages -->
+						<li>
+						
+							<span>Pages</span>
+							
+							<ul>
+							
+								<li><a href="about.html">About</a></li>
+								<li><a href="team.html">Team</a></li>
+								<li><a href="issues.html">Issues</a></li>
+								<li><a href="testimonials.html">Testimonials</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li><a href="page-right-sidebar.html">Page with right sidebar</a></li>
+								<li><a href="page-left-sidebar.html">Page with left sidebar</a></li>
+								<li><a href="page-fullwidth.html">Full width page</a></li>
+								
+							</ul>
+							
+						<div class="dropdown-button"></div></li>
+						<!-- /Pages -->
+						
+						<!-- Events -->
+						<li>
+						
+							<span>Events</span>
+							
+							<ul>
+							
+								<li><a href="event-calendar.html">Calendar</a></li>
+								<li><a href="event-post-v1.html">Event post style 1</a></li>
+								<li><a href="event-post-v2.html">Event post style 2</a></li>
+								
+							</ul>
+							
+						<div class="dropdown-button"></div></li>
+						<!-- /Events -->
+						
+						<!-- Media -->
+						<li>
+						
+							<span>Media</span>
+							
+							<ul>
+							
+								<li>
+									<span>Sortable Grid</span>
+									<ul>
+										<li><a href="media-sortable-1column-sidebar.html">1 Column with right sidebar</a></li>
+										<li><a href="media-sortable-2columns.html">2 Columns</a></li>
+										<li><a href="media-sortable-3columns.html">3 Columns</a></li>
+										<li><a href="media-sortable-3columns-sidebar.html">3 Columns with left sidebar</a></li>
+										<li><a href="media-sortable-4columns.html">4 Columns</a></li>
+									</ul>
+								<div class="dropdown-button"></div></li>
+								
+								<li>
+									<span>Grid with pagination</span>
+									<ul>
+										<li><a href="media-grid-1column-sidebar.html">1 Column with right sidebar</a></li>
+										<li><a href="media-grid-2columns.html">2 Columns</a></li>
+										<li><a href="media-grid-3columns.html">3 Columns</a></li>
+										<li><a href="media-grid-3columns-sidebar.html">3 Columns with left sidebar</a></li>
+										<li><a href="media-grid-4columns.html">4 Columns</a></li>
+									</ul>
+								<div class="dropdown-button"></div></li>
+								
+								<li>
+									<span>Classic gallery</span>
+									<ul>
+										<li><a href="media-classic-sortable-3columns.html">Sortable 3 Columns</a></li>
+										<li><a href="media-classic-sortable-3columns-sidebar.html">Sortable 3 Columns with right sidebar</a></li>
+										<li><a href="media-classic-sortable-4columns.html">Sortable 4 Columns</a></li>
+										<li><a href="media-classic-3columns.html">3 Columns</a></li>
+										<li><a href="media-classic-3columns-sidebar.html">3 Columns with left sidebar</a></li>
+										<li><a href="media-classic-4columns.html">4 Columns</a></li>
+									</ul>
+								<div class="dropdown-button"></div></li>
+								
+								<li>
+									<span>Single portfolio post</span>
+									<ul>
+										<li><a href="portfolio-single-fullwidth.html">Fullwidth</a></li>
+										<li><a href="portfolio-single-sidebar.html">With Sidebar</a></li>
+										<li><a href="portfolio-single-extended.html">Extended Image Slideshow</a></li>
+									</ul>
+								<div class="dropdown-button"></div></li>
+								
+							</ul>
+							
+						<div class="dropdown-button"></div></li>
+						<!-- /Media -->
+						
+						
+						
+						<!-- Get Involved -->
+						<li>
+							<a href="get-involved.html">Get Involved</a>
+						</li>
+						<!-- /Get Involved -->
+						
+						
+						
+						<!-- Features -->
+						<li>
+						
+							<span>Features</span>
+							
+							<ul>
+							
+								<li><a href="features-typography.html">Typography</a></li>
+								<li><a href="features-shortcodes.html">Shortcodes</a></li>
+								
+							</ul>
+							
+						<div class="dropdown-button"></div></li>
+						<!-- /Features -->
+						
+						
+						<!-- Blog -->
+						<li>
+						
+							<span>Blog</span>
+							
+							<ul>
+							
+								<li><a href="blog-v1.html">Blog style 1 with right sidebar</a></li>
+								<li><a href="blog-v2.html">Blog style 2 with left sidebar</a></li>
+								<li><a href="blog-fullwidth.html">Full width blog</a></li>
+								<li><span>Single blog post</span>
+									<ul>
+										<li><a href="blog-single-sidebar.html">With sidebar</a></li>
+										<li><a href="blog-single-fullwidth.html">Full width</a></li>
+									</ul>
+								<div class="dropdown-button"></div></li>
+								
+							</ul>
+							
+						<div class="dropdown-button"></div></li>
+						<!-- /Blog -->
+						
+						
+						<!-- Shop -->
+						<li>
+						
+							<span>Shop</span>
+							
+							<ul>
+							
+								<li><a href="shop-frontpage.html">Front page</a></li>
+								<li><a href="shop-productpage.html">Product page</a></li>
+								<li><a href="shop-cart.html">Shopping cart</a></li>
+								<li><a href="shop-checkout.html">Checkout</a></li>
+								
+							</ul>
+							
+						<div class="dropdown-button"></div></li>
+						<!-- /Shop -->
+						
+						<!-- Donate -->
+						<li class="donate-button ">
+							<a href="#">Donate Today</a>
+						</li>
+						<!-- /Donate -->
+						
+					</ul>
+					
+					</div>
+					
+				</div>
+        </div>  
+   </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../static/js/jquery-2.1.0.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script>  
+        $(window).scroll(function () {  
+            var menu_top = $('#menu_wrap').offset().top;  
+            if ($(window).scrollTop() >= menu_top) {  
+                $('.menu').addClass('menuFixed')  
+            }  
+            else {  
+                $('.menu').removeClass('menuFixed')  
+            }  
+        });    
+    </script>    
+
+  </body>
+</html>

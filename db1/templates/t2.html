@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="../css/buttons.dataTables.min.css">
+<script type="text/javascript" src="../static/js/jquery-2.1.0.js"></script>
+<script type="text/javascript" src="../static/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../static/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="../static/js/jszip.js"></script>
+<script type="text/javascript" src="../static/js/buttons.html5.min.js"></script>
+<style type="text/css">
+    table{
+        width:60%;
+        height:300px;
+        border:1px solid #000;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    td{
+        border:1px solid #000;
+    }
+</style>
+
+<script type="text/javascript">
+    $(function(){
+        $('#sortable').DataTable({
+        	dom: 'Bfrtip',
+buttons: [
+        'csv', 'excel', 'pdf'
+    ]
+        });
+    });
+</script>
+</head>
+<body>
+    <table id="sortable">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+                <th>Column 4</th>
+                <th>Column 5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>1aaa</td>
+            <td>1aaa</td>
+            <td>ccc</td>
+            <td>ddd</td>
+            <td>eee</td>
+        </tr>
+        <tr>
+            <td>3aaa</td>
+            <td>34bbb</td>
+            <td>ccc</td>
+            <td>ddd</td>
+            <td>修改</td>
+        </tr>
+        <tr>
+            <td>22bbb</td>
+            <td>22bbb</td>
+            <td>ccc</td>
+            <td>ddd</td>
+            <td>eee</td>
+        </tr>
+        <tr>
+            <td>5aaa</td>
+            <td>55bbb</td>
+            <td>ccc</td>
+            <td>ddd</td>
+            <td>eee</td>
+        </tr>
+        <tr>
+            <td>4aaa</td>
+            <td>44bbb</td>
+            <td>ccc</td>
+            <td>ddd</td>
+            <td>eee</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

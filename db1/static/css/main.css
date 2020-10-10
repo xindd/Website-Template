@@ -1,0 +1,245 @@
+/*body {
+  min-height: 2000px;
+}*/
+
+#second-background{
+	width: 100%;
+	min-height: 130px;
+  /*background: url(../images/mechanism.png) no-repeat;*/
+  /*-webkit-mask : -webkit-gradient(linear, left top, right bottom, from(rgba(65, 95, 142, 0.33)), to(rgba(65, 95, 142, 0.33)));*/
+  /*background-size:cover;*/
+  
+   background-color: #274472;
+   border-width: 0px;
+   border-radius: 0px;
+   padding: 17px 0px;
+   margin-bottom: 0px;
+   text-align: center;
+    /*background-position: center;*/
+}
+
+#logo img{
+	width: 80%;
+	height: 100%;
+}
+#logo p{
+	margin: 0 0 10px;
+    padding: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: relative;
+    font-size: 30px;
+    color: white;
+}
+
+#discribe p{
+	margin: 25px 0 0 0;
+    padding: 0;
+    border: none;
+    font-size: 14px;
+    color: #97acc3;
+    font-style: italic;
+    position: relative;
+    padding-left: 18px;
+    background: transparent;
+    font-weight: 400;
+}
+
+#search{
+	background: rgb(65, 95, 142);
+    padding: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: relative;
+}
+
+#searchButton{
+	background: #63b2f5;
+}
+
+.form-group{
+	width: 100%;
+}
+
+#searchform input{
+	width: 70%;
+	display: inline;
+}
+
+#searchform h4{
+	font-size: 14px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 7px;
+    color: #ffffff;
+}
+
+.menu{    
+    width:100%;  
+    z-index:1;  
+}    
+
+.menu li:hover{
+	background: #63b2f5;
+}
+
+.menu li a{
+	padding-top: 21px;
+	padding-bottom: 19px;
+}
+
+.current{
+	background-color: #63b2f5;
+}
+/*.navbar-default .navbar-nav>li>a {
+    color: #FFFFFF; 
+}*/
+.current>a{
+	color: #FFFFFF;
+}
+.menuFixed{    
+    position:fixed;    
+    top:0;    
+    left:0;  
+}    
+#menu_wrap{    
+    height:60px;    
+    width:100%;    
+} 
+.setheight{
+	height: 60px;
+	border-top: 0px;
+	/*border-bottom: 1px solid #dee0e5;*/
+	/*border-top: 1px solid #fff;*/
+    /*border-bottom: 1px solid #dee0e5;*/
+}
+.setheight li{
+	height: 60px;
+
+}
+
+.navbar .nav > li .dropdown-menu {
+    margin: 0;
+}
+.navbar .nav > li:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar-default{
+	background: #f2f4f9;
+}
+.navbar-example{
+	height: 60px;
+	padding: 0px;
+	background: #f2f4f9;
+	border-bottom: 1px solid #dee0e5;
+}
+
+.contain{
+	padding-right: 0px;
+	margin-top: 20px;
+}
+
+.footer {
+    bottom: 0;
+    /*margin-top: 10px;*/
+    width: 100%;
+    height: 60px;
+    background-color: #274472;
+}
+.text-foot{
+	text-align: center;
+	margin-top: 20px;
+	color: darkgray;
+}
+
+.contain-analyze{
+	border: 1px solid rgba(39, 68, 114, 0.44);
+	margin-top: 10px;
+	box-shadow: 2px 4px 11px #2d1b1b;
+}
+.jstreelist{
+	height: 450px;
+	overflow-x: auto;
+	overflow-y: auto;
+	border-right: 1px solid rgba(39, 68, 114, 0.44);
+}
+
+.tableshow{
+	height: 450px;
+	overflow-x: auto;
+	/*overflow-y: auto;*/
+	/*background: red;*/
+}
+
+.banner {
+    background: #e2eaf2;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 18px 10px 15px 50px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    min-height: 96px;
+    transition: background 0.3s;
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+}
+.banner .icons {
+    position: absolute;
+    font-size: 44px;
+    /* width: 73px; */
+    color: #c6d0dc;
+    left: 8px;
+    top: 57%;
+    margin-top: -26px;
+}
+.banner h4 {
+    color: #274472;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-left: 12px;
+    white-space: nowrap;
+    transition: color 0.2s;
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+}
+.banner p {
+    color: #808ca4;
+    margin-left: 12px;
+    font-size: 13px;
+    margin-bottom: 0;
+    transition: color 0.2s;
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+}
+.banner-wrapper + .banner-wrapper {
+    margin-top: 6px;
+}
+
+.detail{
+	background: #f2f4f9; 
+	width: 100%; 
+	height: auto;
+	margin-top: 20px;
+	padding-bottom: 20px;
+	
+}
+hr {
+    margin-top: 10px;
+    border: 0;
+    border-top: 2px solid #cfd3d6;
+}
+.clearfloat{
+	clear: both;
+}
+
+.banner-wrapper a:hover{
+	background-color: #63b2f5;
+}
+.banner-wrapper a:hover p{
+	color: white;
+}
