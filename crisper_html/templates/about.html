@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Databases</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="alternate icon" type="image/png" href="">
+  <link rel="stylesheet" href="../static/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../static/css/amazeui.datatables.min.css"/>
+  <link rel="stylesheet" href="../static/css/amazeui.tree.min.css"/>
+  <link rel="stylesheet" href="../static/css/app.css" />
+</head>
+<body>
+<header id="topbar" class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <div class="am-topbar-collapse" id="collapse-head">
+    	<h1 class="am-topbar-brand">
+	      <a href="#">CRISPR-DB</a>
+	    </h1>
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="deposit.html">Deposit</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="analyze.html">Analyze</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li class="am-active"><a href="about.html">About</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+  	<form class="am-topbar-form am-topbar-right am-form-inline" role="search">
+  		<div class="am-input-group">
+			<input type="text" class="am-form-field" name="" placeholder="Search by ID">
+		    <span class="am-input-group-btn">
+		       <button class="am-btn am-btn-primary" type="submit" id="searchButton"><span class="am-icon-search"></span> </button>
+		    </span>
+	   </div>
+    </form>
+    </div>
+  </div>
+</header>
+
+<div class="detail" style="margin: 25px 0;">
+  <div class="am-container">
+  	<div class="tpl-portlet-components">
+                <div class="portlet-title">
+                    <div class="caption font-green bold">
+                        <span class="am-icon-code"></span> About this Database
+                    </div>
+                </div>
+                <div class="tpl-block ">
+                    <div class="am-g tpl-amazeui-form">
+                        <div class="am-u-sm-12 am-u-md-12">
+							<h1>About the CRISPR-DB Archive and the RCSB CRISPR-DB</h1>
+							<img src="http://cdn.rcsb.org/rcsb-pdb/v2/secondary/images/WhatistheRCSBPDB.jpg" class="am-fr">
+							<p>The Protein Data Bank (CRISPR-DB) archive is the single worldwide repository of information about the 3D structures of large biological molecules, including proteins and nucleic acids. These are the molecules of life that are found in all organisms including bacteria, yeast, plants, flies, other animals, and humans. Understanding the shape of a molecule deduce a structure's role in human health and disease, and in drug development. The structures in the archive range from tiny proteins and bits of DNA to complex molecular machines like the ribosome.</p>
+					
+							<p>The CRISPR-DB archive is available at no cost to users. The CRISPR-DB archive is updated weekly.</p>
+					
+							<p>The CRISPR-DB was established in 1971 at Brookhaven National Laboratory under the leadership of Walter Hamilton and originally contained 7 structures. After Hamilton's untimely death, Tom Koetzle began to lead the CRISPR-DB in 1973, and then Joel Sussman in 1994. Led by Helen M. Berman, the Research Collaboratory for Structural Bioinformatics (RCSB) became responsible for the management of the CRISPR-DB in 1998. In 2003, the
+								<a href="http://wwpdb.org" target="_blank">wwCRISPR-DB</a> was formed to maintain a single CRISPR-DB archive of macromolecular structural data that is freely and publicly available to the global community. It consists of organizations that act as deposition, data processing and distribution centers for CRISPR-DB data. Stephen K. Burley became Director in 2014.</p>
+					
+							<p>In addition, the RCSB CRISPR-DB supports a website where visitors can perform simple and complex queries on the data, analyze, and visualize the results. Details about the history, function, progress, and future goals of the RCSB CRISPR-DB can be found in our
+								<a href="/pages/news">Annual Reports</a> and
+								<a href="/pages/newsletters">Newsletters</a>.</p>
+					
+							<p>The
+								<a href="/pages/advisory-committee">CRISPR-DB Advisory Notice</a> defines the conditions for using data from the CRISPR-DB archive. Our
+								<a href="/pages/policies">Policies &amp; References</a> page describes copyright restrictions on RCSB CRISPR-DB materials, our privacy policy, and citation information. Data deposition and release policies are available from
+								<a target="_blank" href="https://www.wwpdb.org/">wwpdb.org</a>.</p>
+					
+							<p>RCSB CRISPR-DB development follows our Mission, Vision, and Values (
+								<a href="https://cdn.rcsb.org/rcsb-pdb/general_information/about_pdb/vision-mission-values.pdf">PDF</a>).
+								<a href="/pages/team">Staff</a> are located at Rutgers, The State University of New Jersey and the University of California, San Diego.
+								<a href="/pages/jobs">Job listings for open positions</a> are posted online.</p>
+					
+							<p>The Rutgers group has been featured on
+								<a href="http://www.youtube.com/watch?v=akmXIy7XQwA" target="_blank">RU-tv</a>
+								and
+								<a href="http://www.youtube.com/watch?v=arO8EgsKvo8&amp;list=PLGVe6BxyFHNXxqzpzmP8ZV1bbn3N2YrmI" target="_blank">Biophysical Society TV</a>.</p>
+
+							<h3>RCSB CRISPR-DB Users and Impact</h3>
+							<p>The RCSB CRISPR-DB has an international community of users, including biologists (in fields such as structural biology, biochemistry, genetics, pharmacology); other scientists (in fields such as bioinformatics, software developers for data analysis and visualization); students and educators (all levels); media writers, illustrators, textbook authors; and the general public.
+							</p>
+							<p>The website (rcsb.org) is accessed by &gt;1 million unique visitors per year.</p>
+					
+							<p>RCSB CRISPR-DB services have broad impact across research and education. The primary RCSB CRISPR-DB citation (Berman <em>et al</em>., <em>Nucleic Acids Research</em> 2000) is one of the top-cited scientific publications of all time. A bibliometric analysis performed by Clarivate Analytics (
+								<a href="https://cdn.rcsb.org/rcsb-pdb/general_information/about_pdb/Clarivate-Analytics-CRISPR-DB-Impact.pdf">PDF</a>) in 2017 shows CRISPR-DB motivated high-quality research throughout the world. Papers citing had a citation-based impact exceeding the world-average in 16 scientific fields including Biology &amp; Biochemistry, Computer Science, Plant &amp; Animal Sciences, Physics, Environment/Ecology, Mathematics and Geosciences.</p>
+					
+							<p>An economic analysis performed by the Rutgers Office of Research Analytics in 2016 noted that a reasonable estimate to replicate the CRISPR-DB data archive is $12 billion (
+								<a href="https://cdn.rcsb.org/rcsb-pdb/general_information/about_pdb/Economic Impacts of the CRISPR-DB.pdf">PDF</a>). The use value of RCSB CRISPR-DB data and services is estimated at $5.5 billion annually.</p>
+					
+							<h3>RCSB CRISPR-DB Advisory Committee</h3>
+							<p>The
+								<a href="/pages/advisory-committee">RCSB CRISPR-DB Advisory Committee</a> is made up of an international team of experts in X-ray crystallography, cryoEM, NMR, bioinformatics and education. RCSB CRISPR-DB appreciates the valuable feedback they provide on an ongoing basis.</p>
+							<h3>Worldwide CRISPR-DB (<a target="_blank" href="http://www.wwpdb.org">wwCRISPR-DB</a>)</h3>
+					
+							<p>As the wwCRISPR-DB archive keeper, the RCSB CRISPR-DB updates the CRISPR-DB archive at
+								<a target="_blank" href="ftp://ftp.wwpdb.org">ftp://ftp.wwpdb.org</a> weekly. The structures included in each release are highlighted on the RCSB CRISPR-DB home page and clearly defined on the FTP site. These sites are maintained 24 hours a day, seven days a week. A failover system automatically redirects internet traffic to a mirror site, if needed.</p>
+					
+							<h3>RCSB CRISPR-DB History</h3>
+							<p>Below is a time line of key CRISPR-DB events and structural biology highlights, from 1971 to 2011. Left are the key events in the evolution of the CRISPR-DB. Right are selected key structures in the field of structural biology. Taken from
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="am-container">
+    <p>2018,CopyRight © College of Bioinformatics Science and Technology, Harbin Medical University, China.</p>
+  </div>
+</footer>
+
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="../static/js/jquery-2.1.0.js"></script>
+<!--<![endif]-->
+<script src="../static/js/amazeui.min.js"></script>
+</body>
+</html>

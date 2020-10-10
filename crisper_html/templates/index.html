@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Databases</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="alternate icon" type="image/png" href="/i/favicon.png">
+  <link rel="stylesheet" href="../static/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../static/css/app.css" />
+</head>
+<body>
+<header id="topbar" class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <div class="am-topbar-collapse" id="collapse-head">
+    	<h1 class="am-topbar-brand">
+	      <a href="#">CRISPR-DB</a>
+	    </h1>
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li class="am-active"><a href="index.html">Home</a></li>
+        <li><a href="deposit.html">Deposit</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="analyze.html">Analyze</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="get get-bg">
+  <div class="am-container ">
+  	<div class="am-g">
+	    <div id="logo" class="am-u-lg-3 am-u-md-3 am-u-sm-3">
+				<!--<a href="#"><img src="../imgs/top-background.jpg" alt="Logo"></a>-->
+				<p>Anti-CRISPR</p>
+			</div>
+			<div id="discribe" class="am-u-lg-4 am-u-md-4 am-u-sm-4">
+				<p>CRISPR is a tool that is widely used for gene editing. <br />Anti-CRISPR resource acts as an online resource to organize the anti-CRISPR proteins. It enables easy browsing of the anti-CRISPRs that have been published. </p>
+			</div>
+			<div id="search" class="am-u-lg-5 am-u-md-5 am-u-sm-5" data-am-scrollspy="{animation:'slide-right', repeat: true}">
+					<form action="" method="get" name="" class="form-inline" id="searchform">
+						<h3>
+							Quick Search
+						</h3>
+						<div class="am-input-group">
+							<input type="text" class="am-form-field" name="" placeholder="Search by ID">
+				      <span class="am-input-group-btn">
+				        <button class="am-btn am-btn-primary" type="submit" id="searchButton"><span class="am-icon-search"></span> </button>
+				      </span>
+				   	</div>
+	        </form>
+				</div>
+		</div>
+  </div>
+</div>
+
+
+<!--<div class="detail">
+  <div class="am-container">
+    <div class="am-g">
+    	<div class="am-u-sm-9 detail-mb">
+      	
+      </div>
+      <div class="am-u-sm-3 detail-mb">
+      	
+      </div>
+      <div class="am-u-sm-9 detail-mb">
+      	<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+				  <ul class="am-slides">
+				    <li>
+				    	<img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" />
+				    	<div class="am-slider-desc">
+								<div class="am-slider-content">
+									<h2 class="am-slider-title">兔妮妮历险记</h2>
+									<p>ddddddddd<br>hhhhhhhhhhhhhh<br>gggggggggg</p>
+								</div>
+								<a class="am-slider-more" href="http://www.tunini.com" target="_blank">了解更多</a>
+							</div>
+				    </li>
+				    <li>
+				    	<img src="http://s.amazeui.org/media/i/demos/bing-2.jpg" />
+				    	<div class="am-slider-desc">
+								<div class="am-slider-content">
+									<h2 class="am-slider-title">兔妮妮历险记</h2>
+									<p>ddddddddd<br>hhhhhhhhhhhhhh<br>gggggggggg</p>
+								</div>
+								<a class="am-slider-more" href="http://www.tunini.com" target="_blank">了解更多</a>
+							</div>
+				    </li>
+				  </ul>
+				</div>
+      </div>
+      <div class="am-u-sm-3 detail-mb">
+        <h3 class="detail-h3">
+          <i class="am-icon-cogs am-icon-sm"></i>
+          组件丰富，模块化
+        </h3>
+
+        <p class="detail-p">
+          Amaze UI 含近 20 个 CSS 组件、10 个 JS 组件，更有 17 款包含近 60 个主题的 Widgets，可快速构建界面出色、体验优秀的跨屏页面，大幅度提升你的开发效率。
+        </p>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<div class="detail">
+			<div class="am-container">
+				<div class="am-container">
+			    <h2 class="detail-h2">Biomechanism</h2>
+			
+			    <div class="am-g">
+			      <div class="am-u-sm-4 detail-mb" style="text-align: center;" data-am-modal="{target: '#doc-modal-1', closeViaDimmer: 0, width: 800, height: 600}">
+			      	<img class="am-circle" src="../static/imgs/1.jpg" width="200" height="200"/>
+			        <h3 class="detail-h3" style="text-align: center;">
+			          	CRISPR-Cas system 
+			        </h3>
+			      </div>
+			      <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-1">
+							<div class="am-modal-dialog">
+								<div class="am-modal-hd">CRISPR-Cas system
+									<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+								</div>
+								<div class="am-modal-bd">
+									<img class="" src="../static/imgs/1-1.jpg"/>
+									<p>CRISPR is a tool that is widely used for gene editing. Anti-CRISPR resource acts as an online resource to organize the anti-CRISPR proteins. It enables easy browsing of the anti-CRISPRs that have been published.CRISPR is a tool that is widely used for gene editing. Anti-CRISPR resource acts as an online resource to organize the anti-CRISPR proteins. It enables easy browsing of the anti-CRISPRs that have been published. </p>
+			      
+								</div>
+							</div>
+						</div>
+			      <div class="am-u-sm-4 detail-mb" data-am-modal="{target: '#doc-modal-2', closeViaDimmer: 0, width: 800, height: 600}">
+			      	<img class="am-circle" src="../static/imgs/2.jpg" width="200" height="200"/>
+			        <h3 class="detail-h3" style="text-align: center;">
+			          	AcrF
+			        </h3>
+			      </div>
+			      <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-2">
+							<div class="am-modal-dialog">
+								<div class="am-modal-hd">AcrF
+									<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+								</div>
+								<div class="am-modal-bd">
+									<img class="" src="../static/imgs/2-1.jpg"/>
+									<p>CRISPR is a tool that is widely used for gene editing. Anti-CRISPR resource acts as an online resource to organize the anti-CRISPR proteins. It enables easy browsing of the anti-CRISPRs that have been published.CRISPR is a tool that is widely used for gene editing. Anti-CRISPR resource acts as an online resource to organize the anti-CRISPR proteins. It enables easy browsing of the anti-CRISPRs that have been published. </p>
+			      
+								</div>
+							</div>
+						</div>
+			      <div class="am-u-sm-4 detail-mb" data-am-modal="{target: '#doc-modal-3', closeViaDimmer: 0, width: 800, height: 600}">
+			      	<img class="am-circle" src="../static/imgs/3.jpg" width="200" height="200"/>
+			        <h3 class="detail-h3" style="text-align: center;">
+			          	Eukaryote
+			        </h3>
+			      </div>
+			      <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-3">
+							<div class="am-modal-dialog">
+								<div class="am-modal-hd">Eukaryote
+									<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+								</div>
+								<div class="am-modal-bd">
+									<img class="" src="../static/imgs/3-1.jpg"/>
+									<p>CRISPR is a tool that is widely used for gene editing. Anti-CRISPR resource acts as an online resource to organize the anti-CRISPR proteins. It enables easy browsing of the anti-CRISPRs that have been published.CRISPR is a tool that is widely used for gene editing. Anti-CRISPR resource acts as an online resource to organize the anti-CRISPR proteins. It enables easy browsing of the anti-CRISPRs that have been published. </p>
+			      
+								</div>
+							</div>
+						</div>
+			    </div>
+			 </div>
+			</div>
+</div>
+<div class="detail" style="background-color: #f2f4f9;;">
+	<div class="am-container">
+				<div id="abstract">
+					<h2>Abstract</h2> 
+					<hr/>
+					<div class="" style="width: 40%;float: left;">
+						<img src="../static/imgs/top-background.jpg" style="width: 100%;" data-am-scrollspy="{animation:'slide-left', repeat: true}"/>
+					</div>
+					<div class="" style="width: 60%;float: left;padding: 20px;">
+						<h4>Thumbnail label</h4>
+		        <p>A comprehensive and user-friendly knowledge base to explore CRISPR-systems in bacteria-phage interactions.</p>
+						<p>This database seeks to gather and investigate the growing pool of important CRISPR information in this fast-growing field and transform it into meaningful annotations.</p>
+						<p>This database seeks to gather and investigate the growing pool of important CRISPR information in this fast-growing field and transform it into meaningful annotations.</p>
+					</div>
+				</div>
+				<div class="clearfloat"></div>
+				<div id="introduciton">
+					<h2>Introduction</h2> 
+					<hr/>
+					<div class="" style="width: 40%;float: left;">
+						<img src="../static/imgs/top-background.jpg" style="width: 100%;" data-am-scrollspy="{animation:'slide-left', repeat: true}"/>
+					</div>
+					<div class=""style="width: 60%;float: left;padding: 20px;">
+						<h4>Thumbnail label</h4>
+		        <p>A comprehensive and user-friendly knowledge base to explore CRISPR-systems in bacteria-phage interactions.</p>
+						<p>This database seeks to gather and investigate the growing pool of important CRISPR information in this fast-growing field and transform it into meaningful annotations.</p>
+						<p>This database seeks to gather and investigate the growing pool of important CRISPR information in this fast-growing field and transform it into meaningful annotations.</p>
+					</div>
+				</div>
+				<div class="clearfloat"></div>
+				<div id="news">
+					<h2>News</h2> 
+					<hr/>
+					<div class="" style="width: 40%;float: left;">
+						<img src="../static/imgs/top-background.jpg" style="width: 100%;" data-am-scrollspy="{animation:'slide-left', repeat: true}"/>
+					</div>
+					<div class=""style="width: 60%;float: left;padding: 20px;">
+						<h4>Thumbnail label</h4>
+		        <p>A comprehensive and user-friendly knowledge base to explore CRISPR-systems in bacteria-phage interactions.</p>
+						<p>This database seeks to gather and investigate the growing pool of important CRISPR information in this fast-growing field and transform it into meaningful annotations.</p>
+						<p>This database seeks to gather and investigate the growing pool of important CRISPR information in this fast-growing field and transform it into meaningful annotations.</p>
+					</div>
+				</div>
+				<div class="clearfloat"></div>
+				<div id="statistics">
+					<h2>Statistics</h2> 
+					<hr/>
+					<div class="" style="width: 40%;float: left;">
+						<img src="../static/imgs/top-background.jpg" style="width: 100%;"/>
+					</div>
+					<div class=""style="width: 60%;float: left;padding: 20px;">
+						<h4>Thumbnail label</h4>
+		        <p>A comprehensive and user-friendly knowledge base to explore CRISPR-systems in bacteria-phage interactions.</p>
+						<p>This database seeks to gather and investigate the growing pool of important CRISPR information in this fast-growing field and transform it into meaningful annotations.</p>
+						<p>This database seeks to gather and investigate the growing pool of important CRISPR information in this fast-growing field and transform it into meaningful annotations.</p>
+					</div>
+				</div>
+				<div class="clearfloat"></div>
+			</div>
+		
+</div>
+<footer class="footer">
+  <div class="am-container">
+    <p>2018,CopyRight © College of Bioinformatics Science and Technology, Harbin Medical University, China.</p>
+  </div>
+</footer>
+
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="../static/js/jquery-2.1.0.js"></script>
+<!--<![endif]-->
+<script src="../static/js/amazeui.min.js"></script>
+</body>
+</html>

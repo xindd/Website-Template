@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Databases</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="alternate icon" type="image/png" href="">
+  <link rel="stylesheet" href="../static/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../static/css/amazeui.datatables.min.css"/>
+  <link rel="stylesheet" href="../static/css/amazeui.tree.min.css"/>
+  <link rel="stylesheet" href="../static/css/app.css" />
+</head>
+<body>
+<header id="topbar" class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <div class="am-topbar-collapse" id="collapse-head">
+    	<h1 class="am-topbar-brand">
+	      <a href="#">CRISPR-DB</a>
+	    </h1>
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="deposit.html">Deposit</a></li>
+        <li  class="am-active"><a href="search.html">Search</a></li>
+        <li><a href="analyze.html">Analyze</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+  	<form class="am-topbar-form am-topbar-right am-form-inline" role="search">
+  		<div class="am-input-group">
+			<input type="text" class="am-form-field" name="" placeholder="Search by ID">
+		    <span class="am-input-group-btn">
+		       <button class="am-btn am-btn-primary" type="submit" id="searchButton"><span class="am-icon-search"></span> </button>
+		    </span>
+	   </div>
+    </form>
+    </div>
+  </div>
+</header>
+
+<div class="detail" style="margin: 25px 0;">
+  <div class="am-container">
+  	<div class="am-g">
+      <div class="am-u-sm-3">
+      	<ul class="am-list admin-sidebar-list" id="collapase-nav-1">
+				  <li  class="am-panel">
+				    <a data-am-collapse="{parent: '#collapase-nav-1'}" href="#/"><i class="am-icon-reply-all am-margin-left-sm"></i> All</a>
+				  </li>
+					<li class="am-panel">
+				    <a data-am-collapse="{parent: '#collapase-nav-1', target: '#role-nav1'}">
+				        <i class="am-icon-folder am-margin-left-sm"></i> Bacteria <i class="am-icon-angle-right am-fr am-margin-right"></i>
+				    </a>
+				    <ul class="am-list am-collapse admin-sidebar-sub" id="role-nav1">
+				        <li><a href="#/roleAdd"><span class="am-icon-file am-margin-left-sm"></span> anti-proteins </a></li>
+				        <li><a href="#/roleList/0"><span class="am-icon-file am-margin-left-sm"></span> P1 </a></li>
+				        <li><a href="#/roleList/0"><span class="am-icon-file am-margin-left-sm"></span> P2 </a></li>
+				    </ul>
+				  </li>
+				  
+				  <li class="am-panel">
+				    <a data-am-collapse="{parent: '#collapase-nav-1', target: '#role-nav2'}">
+				        <i class="am-icon-folder am-margin-left-sm"></i> Plant <i class="am-icon-angle-right am-fr am-margin-right"></i>
+				    </a>
+				    
+				    <ul class="am-list am-collapse admin-sidebar-sub" id="role-nav2">
+				        <!--<li><a href="#/roleAdd"><span class="am-icon-folder am-margin-left-sm"></span> P1 </a></li>-->
+						    <li class="am-panel">
+							    <a data-am-collapse="{parent: '#role-nav2', target: '#role-nav5'}">
+							        <i class="am-icon-folder am-margin-left-sm"></i> Plant2 <i class="am-icon-angle-right am-fr am-margin-right"></i>
+							    </a>
+							    <ul class="am-list am-collapse admin-sidebar-sub" id="role-nav5">
+							        <li><a href="#/roleAdd"><span class="am-icon-file am-margin-left-sm"></span> P8 </a></li>
+							        <li><a href="#/roleList/0"><span class="am-icon-file am-margin-left-sm"></span> P9 </a></li>
+							    </ul>
+							  </li>
+							  
+				        <li><a href="#/roleList/0"><span class="am-icon-folder am-margin-left-sm"></span> P2 </a></li>
+				    </ul>
+				  </li>
+				  
+				  <li class="am-panel">
+				    <a data-am-collapse="{parent: '#collapase-nav-1', target: '#role-nav3'}">
+				        <i class="am-icon-folder am-margin-left-sm"></i> Insect <i class="am-icon-angle-right am-fr am-margin-right"></i>
+				    </a>
+				    <ul class="am-list am-collapse admin-sidebar-sub" id="role-nav3">
+				        <li><a href="#/roleAdd"><span class="am-icon-file am-margin-left-sm"></span> P1 </a></li>
+				        <li><a href="#/roleList/0"><span class="am-icon-file am-margin-left-sm"></span> P2 </a></li>
+				    </ul>
+				  </li>
+				  <li class="am-panel">
+				    <a data-am-collapse="{parent: '#collapase-nav-1', target: '#role-nav4'}">
+				        <i class="am-icon-folder am-margin-left-sm"></i> Animal <i class="am-icon-angle-right am-fr am-margin-right"></i>
+				    </a>
+				    <ul class="am-list am-collapse admin-sidebar-sub" id="role-nav4">
+				        <li><a href="#/roleAdd"><span class="am-icon-file am-margin-left-sm"></span> P1 </a></li>
+				        <li><a href="#/roleList/0"><span class="am-icon-file am-margin-left-sm"></span> P2 </a></li>
+				    </ul>
+				  </li>
+				  
+				</ul>
+      </div>
+      <div class="am-u-sm-9">
+      	<div class="row am-cf">
+	        <div class="am-u-md-8">
+	        	<div class="am-panel am-panel-default">
+                  <div class="am-panel-hd">
+                    <h4 class="am-panel-title" data-am-collapse="{ target: '#base1'}">
+                      Statistics
+                    </h4>
+                  </div>
+                  <div id="base1" class="am-panel-collapse am-collapse am-in">
+                    <div class="am-panel-bd">
+                       <div class="" id="pie-echarts" style="width:100%;height: 220px;"></div>
+                    </div>
+                  </div>
+              </div>
+	        </div>
+	        <div class="am-u-md-4">
+	        	<div class="am-panel am-panel-default">
+                  <div class="am-panel-hd">
+                    <h4 class="am-panel-title" data-am-collapse="{ target: '#base2'}">
+                      Statistics
+                    </h4>
+                  </div>
+                  <div id="base2" class="am-panel-collapse am-collapse am-in">
+                    <div class="am-panel-bd">
+                        <div class="am-progress-title">First <span class="am-fr am-progress-title-more">15% / 100%</span></div>
+	                    <div class="am-progress">
+	                        <div class="am-progress-bar" style="width: 15%"></div>
+	                    </div>
+	                    <div class="am-progress-title">Second<span class="am-fr am-progress-title-more">75% / 100%</span></div>
+	                    <div class="am-progress">
+	                        <div class="am-progress-bar  am-progress-bar-warning" style="width: 75%"></div>
+	                    </div>
+	                    <div class="am-progress-title">Third<span class="am-fr am-progress-title-more">35% / 100%</span></div>
+	                    <div class="am-progress">
+	                        <div class="am-progress-bar am-progress-bar-danger" style="width: 35%"></div>
+	                    </div>
+                    </div>
+                  </div>
+              </div>
+	          </div>
+        </div>
+        
+      	<div class="am-u-sm-12" style="min-height: 720px;">
+      		<div class="am-panel am-panel-default">
+                  <div class="am-panel-hd">
+                    <h4 class="am-panel-title" data-am-collapse="{ target: '#base3'}">
+                      Tables-detail
+                    </h4>
+                  </div>
+                  <div id="base3" class="am-panel-collapse am-collapse am-in">
+                    <div class="am-panel-bd">
+                       <table class="am-table am-table-striped am-table-bordered am-table-compact" id="table-list">
+				  <thead>
+		        <tr>
+		            <th>Name</th>
+		            <th>Position</th>
+		            <th>Office</th>
+		            <th>Age</th>
+		            <th>Start date</th>
+		            <th>Salary</th>
+		        </tr>
+		      </thead>
+		      <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        	</tfoot>
+        	<tbody>
+            <tr>
+                <td><a href="search-detail.html">Tiger Nixon</a></td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011/04/25</td>
+                <td>$320,800</td>
+            </tr>
+            <tr>
+                <td><a href="search-detail.html">Garrett Winters</a></td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>63</td>
+                <td>2011/07/25</td>
+                <td>$170,750</td>
+            </tr>
+            <tr>
+                <td>  <a href="search-detail.html">Ashton Cox</a></td>
+                <td>Junior Technical Author</td>
+                <td>San Francisco</td>
+                <td>66</td>
+                <td>2009/01/12</td>
+                <td>$86,000</td>
+            </tr>
+            <tr>
+                <td>Cedric Kelly</td>
+                <td>Senior Javascript Developer</td>
+                <td>Edinburgh</td>
+                <td>22</td>
+                <td>2012/03/29</td>
+                <td>$433,060</td>
+            </tr>
+            <tr>
+                <td><a href="search-detail.html">Airi Satou</a></td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>33</td>
+                <td>2008/11/28</td>
+                <td>$162,700</td>
+            </tr>
+            <tr>
+                <td>Brielle Williamson</td>
+                <td>Integration Specialist</td>
+                <td>New York</td>
+                <td>61</td>
+                <td>2012/12/02</td>
+                <td>$372,000</td>
+            </tr>
+            <tr>
+                <td>Herrod Chandler</td>
+                <td>Sales Assistant</td>
+                <td>San Francisco</td>
+                <td>59</td>
+                <td>2012/08/06</td>
+                <td>$137,500</td>
+            </tr>
+            <tr>
+                <td>Rhona Davidson</td>
+                <td>Integration Specialist</td>
+                <td>Tokyo</td>
+                <td>55</td>
+                <td>2010/10/14</td>
+                <td>$327,900</td>
+            </tr>
+            <tr>
+                <td>Colleen Hurst</td>
+                <td>Javascript Developer</td>
+                <td>San Francisco</td>
+                <td>39</td>
+                <td>2009/09/15</td>
+                <td>$205,500</td>
+            </tr>
+            <tr>
+                <td>Sonya Frost</td>
+                <td>Software Engineer</td>
+                <td>Edinburgh</td>
+                <td>23</td>
+                <td>2008/12/13</td>
+                <td>$103,600</td>
+            </tr>
+            <tr>
+                <td>Jena Gaines</td>
+                <td>Office Manager</td>
+                <td>London</td>
+                <td>30</td>
+                <td>2008/12/19</td>
+                <td>$90,560</td>
+            </tr>
+            <tr>
+                <td>Quinn Flynn</td>
+                <td>Support Lead</td>
+                <td>Edinburgh</td>
+                <td>22</td>
+                <td>2013/03/03</td>
+                <td>$342,000</td>
+            </tr>
+            <tr>
+                <td>Charde Marshall</td>
+                <td>Regional Director</td>
+                <td>San Francisco</td>
+                <td>36</td>
+                <td>2008/10/16</td>
+                <td>$470,600</td>
+            </tr>
+        </tbody>
+				</table>
+                    </div>
+                  </div>
+              </div>
+      		
+      	</div>
+      </div>
+   </div>
+  	</div>
+</div>
+
+
+<footer class="footer">
+  <div class="am-container">
+    <p>2018,CopyRight © College of Bioinformatics Science and Technology, Harbin Medical University, China.</p>
+  </div>
+</footer>
+
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="../static/js/jquery-2.1.0.js"></script>
+<!--<![endif]-->
+<script src="../static/js/amazeui.min.js"></script>
+<script src="../static/js/echarts.min.js"></script>
+<script src="../static/js/pie.js"></script>
+<script src="../static/js/amazeui.datatables.min.js"></script>
+<script src="../static/js/amazeui.tree.min.js"></script>
+<script type="text/javascript" src="../static/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="../static/js/buttons.html5.min.js"></script>
+<script type="application/javascript">
+	$(function() {
+    $('#table-list').DataTable(
+    	{
+    		dom: 'Bfrtip',
+    		buttons: [
+	        {
+		        extend: 'csv',
+		        filename: 'datatables',
+		        text: 'Download',
+	        }
+        ],
+        language: {
+                 "zeroRecords": "No matching records found",
+                 "info": "showing _PAGE_  ( all _PAGES_  )",
+                 "infoEmpty": "No matching records found",
+                 "infoFiltered": "(filtered from _MAX_ total entries)",
+                 "sSearch": "Search",
+                 "oPaginate": {
+										"sPrevious":"Previous",
+                 		"sNext": "Next"
+									},
+             }
+    	}
+    );
+});
+	
+	
+</script>
+<script>
+		$('#tree').tree({
+    dataSource: function(options, callback) {
+      // 模拟异步加载
+      setTimeout(function() {
+        callback({data: options.products || data});
+      }, 400);
+    },
+    multiSelect: false,
+    cacheItems: true,
+    folderSelect: false
+  });
+  $(function() {
+    var $fullText = $('.admin-fullText');
+    $('#admin-fullscreen').on('click', function() {
+      $.AMUI.fullscreen.toggle();
+    });
+  });
+</script>
+</body>
+</html>

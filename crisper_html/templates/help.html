@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Databases</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="alternate icon" type="image/png" href="">
+  <link rel="stylesheet" href="../static/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../static/css/amazeui.datatables.min.css"/>
+  <link rel="stylesheet" href="../static/css/amazeui.tree.min.css"/>
+  <link rel="stylesheet" href="../static/css/app.css" />
+</head>
+<body>
+<header id="topbar" class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <div class="am-topbar-collapse" id="collapse-head">
+    	<h1 class="am-topbar-brand">
+	      <a href="#">CRISPR-DB</a>
+	    </h1>
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="deposit.html">Deposit</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="analyze.html">Analyze</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="am-active"><a href="help.html">Help</a></li>
+      </ul>
+  	<form class="am-topbar-form am-topbar-right am-form-inline" role="search">
+  		<div class="am-input-group">
+			<input type="text" class="am-form-field" name="" placeholder="Search by ID">
+		    <span class="am-input-group-btn">
+		       <button class="am-btn am-btn-primary" type="submit" id="searchButton"><span class="am-icon-search"></span> </button>
+		    </span>
+	   </div>
+    </form>
+    </div>
+  </div>
+</header>
+
+<div class="detail" style="margin: 25px 0;margin-bottom: 220px;">
+  <div class="am-container">
+  	<div class="am-g">
+      <div class="am-u-sm-12">
+      	<div class="row am-cf">
+	        <div class="am-u-md-12">
+	        	<div class="am-panel am-panel-default">
+                  <div class="am-panel-hd">
+                    <h4 class="am-panel-title" data-am-collapse="{ target: '#base1'}">
+                      Help
+                    </h4>
+                  </div>
+                  <div id="base1" class="am-panel-collapse am-collapse am-in">
+                    <div class="am-panel-bd">
+                    	<div class="am-panel-group" id="accordion">
+							  <div class="am-panel am-panel-default">
+							    <div class="am-panel-hd">
+							      <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#do-not-say-1'}">
+							        <span class="am-icon-btn">
+							        	01
+							        </span> 
+							        <p> Get an overview of db</p>
+							      </h4>
+							    </div>
+							    <div id="do-not-say-1" class="am-panel-collapse am-collapse am-in">
+							      <div class="am-panel-bd">
+							        Step 1
+							      </div>
+							    </div>
+							  </div>
+							  <div class="am-panel am-panel-default">
+							    <div class="am-panel-hd">
+							      <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#do-not-say-2'}">
+							         <span class="am-icon-btn">
+							        	02
+							        </span> 
+							        <p> How to search Curation by disease name ?</p> 
+							      </h4>
+							    </div>
+							    <div id="do-not-say-2" class="am-panel-collapse am-collapse">
+							      <div class="am-panel-bd">
+							        Step 2
+							      </div>
+							    </div>
+							  </div>
+							  <div class="am-panel am-panel-default">
+							    <div class="am-panel-hd">
+							      <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#do-not-say-3'}">
+							      	 <span class="am-icon-btn">
+							        	03
+							        </span> 
+							        <p> How to search Curation by the regulatory relation type between the lncRNAs and DNA methylation ?</p>
+							      </h4>
+							    </div>
+							    <div id="do-not-say-3" class="am-panel-collapse am-collapse">
+							      <div class="am-panel-bd">
+							        Step 3
+							      </div>
+							    </div>
+							  </div>
+							  <div class="am-panel am-panel-default">
+							    <div class="am-panel-hd">
+							      <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#do-not-say-4'}">
+							      	 <span class="am-icon-btn">
+							        	04
+							        </span> 
+							        <p>  How to read results of Curation ?</p>
+							      </h4>
+							    </div>
+							    <div id="do-not-say-4" class="am-panel-collapse am-collapse">
+							      <div class="am-panel-bd">
+							        Step 4
+							      </div>
+							    </div>
+							  </div>
+							  <div class="am-panel am-panel-default">
+							    <div class="am-panel-hd">
+							      <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#do-not-say-5'}">
+							      	 <span class="am-icon-btn">
+							        	05
+							        </span> 
+							        <p> How to make use of Disease Centric Search results ?</p>
+							      </h4>
+							    </div>
+							    <div id="do-not-say-5" class="am-panel-collapse am-collapse">
+							      <div class="am-panel-bd">
+							        Step 5
+							      </div>
+							    </div>
+							  </div>
+							</div>
+                    </div>
+                  </div>
+              </div>
+	        </div>
+	        <div class="am-u-md-12">
+	        	<div class="am-panel am-panel-default">
+                  <div class="am-panel-hd">
+                    <h4 class="am-panel-title" data-am-collapse="{ target: '#base2'}">
+                      Contact Us
+                    </h4>
+                  </div>
+                  <div id="base2" class="am-panel-collapse am-collapse am-in">
+                    <div class="am-panel-bd">
+                        Please email: xxx@126.com when you have any question or problem about using Lnc2Meth.
+                    </div>
+                  </div>
+              </div>
+	          </div>
+       </div>
+      </div>
+   </div>
+  	</div>
+</div>
+
+
+<footer class="footer">
+  <div class="am-container">
+    <p>2018,CopyRight © College of Bioinformatics Science and Technology, Harbin Medical University, China.</p>
+  </div>
+</footer>
+
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="../static/js/jquery-2.1.0.js"></script>
+<!--<![endif]-->
+<script src="../static/js/amazeui.min.js"></script>
+<script src="../static/js/echarts.min.js"></script>
+<script src="../static/js/pie.js"></script>
+<script src="../static/js/amazeui.datatables.min.js"></script>
+<script src="../static/js/amazeui.tree.min.js"></script>
+<script type="text/javascript" src="../static/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="../static/js/buttons.html5.min.js"></script>
+<script type="application/javascript">
+	$(function() {
+    $('#table-list').DataTable(
+    	{
+    		dom: 'Bfrtip',
+    		buttons: [
+	        {
+		        extend: 'csv',
+		        filename: 'datatables',
+		        text: 'Download',
+	        }
+        ],
+        language: {
+                 "zeroRecords": "No matching records found",
+                 "info": "showing _PAGE_  ( all _PAGES_  )",
+                 "infoEmpty": "No matching records found",
+                 "infoFiltered": "(filtered from _MAX_ total entries)",
+                 "sSearch": "Search",
+                 "oPaginate": {
+										"sPrevious":"Previous",
+                 		"sNext": "Next"
+									},
+             }
+    	}
+    );
+});
+	
+	
+</script>
+<script>
+	  var data = [
+    {
+      title: '苹果公司',
+      type: 'folder',
+      products: [
+        {
+          title: 'iPhone',
+          type: 'item'
+        },
+        {
+          title: 'iMac',
+          type: 'item'
+        },
+        {
+          title: 'MacBook Pro',
+          type: 'item'
+        }
+      ]
+    },
+    {
+      title: '微软公司',
+      type: 'item'
+    }
+  ];
+		$('#tree').tree({
+    dataSource: function(options, callback) {
+      // 模拟异步加载
+      setTimeout(function() {
+        callback({data: options.products || data});
+      }, 400);
+    },
+    multiSelect: false,
+    cacheItems: true,
+    folderSelect: false
+  });
+  $(function() {
+    var $fullText = $('.admin-fullText');
+    $('#admin-fullscreen').on('click', function() {
+      $.AMUI.fullscreen.toggle();
+    });
+
+    $(document).on($.AMUI.fullscreen.raw.fullscreenchange, function() {
+      $fullText.text($.AMUI.fullscreen.isFullscreen ? '退出全屏' : '开启全屏');
+    });
+  });
+</script>
+</body>
+</html>

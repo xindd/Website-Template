@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Databases</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="alternate icon" type="image/png" href="">
+  <link rel="stylesheet" href="../static/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="../static/css/amazeui.datatables.min.css"/>
+  <link rel="stylesheet" href="../static/css/amazeui.tree.min.css"/>
+  <link rel="stylesheet" href="../static/css/app.css" />
+</head>
+<body>
+<header id="topbar" class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <div class="am-topbar-collapse" id="collapse-head">
+    	<h1 class="am-topbar-brand">
+	      <a href="#">CRISPR-DB</a>
+	    </h1>
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="deposit.html">Deposit</a></li>
+        <li  class="am-active"><a href="search.html">Search</a></li>
+        <li><a href="analyze.html">Analyze</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+  	<form class="am-topbar-form am-topbar-right am-form-inline" role="search">
+  		<div class="am-input-group">
+			<input type="text" class="am-form-field" name="" placeholder="Search by ID">
+		    <span class="am-input-group-btn">
+		       <button class="am-btn am-btn-primary" type="submit" id="searchButton"><span class="am-icon-search"></span> </button>
+		    </span>
+	   </div>
+    </form>
+    </div>
+  </div>
+</header>
+
+<div class="detail" style="margin: 25px 0;">
+  <div class="am-container">
+  	<div class="am-g">
+      <div class="am-u-sm-3">
+      	<ul class="am-list admin-sidebar-list" id="collapase-nav-1">
+				  <li  class="am-panel">
+				    <a data-am-collapse="{parent: '#collapase-nav-1'}" href="#/"><i class="am-icon-reply-all am-margin-left-sm"></i> All</a>
+				  </li>
+					<li class="am-panel">
+				    <a data-am-collapse="{parent: '#collapase-nav-1', target: '#role-nav1'}">
+				        <i class="am-icon-folder am-margin-left-sm"></i> Bacteria <i class="am-icon-angle-right am-fr am-margin-right"></i>
+				    </a>
+				    <ul class="am-list am-collapse admin-sidebar-sub" id="role-nav1">
+				        <li><a href="#/roleAdd"><span class="am-icon-file am-margin-left-sm"></span> anti-proteins </a></li>
+				        <li><a href="#/roleList/0"><span class="am-icon-file am-margin-left-sm"></span> P1 </a></li>
+				        <li><a href="#/roleList/0"><span class="am-icon-file am-margin-left-sm"></span> P2 </a></li>
+				    </ul>
+				  </li>
+				  
+				  <li class="am-panel">
+				    <a data-am-collapse="{parent: '#collapase-nav-1', target: '#role-nav2'}">
+				        <i class="am-icon-folder am-margin-left-sm"></i> Plant <i class="am-icon-angle-right am-fr am-margin-right"></i>
+				    </a>
+				    
+				    <ul class="am-list am-collapse admin-sidebar-sub" id="role-nav2">
+				        <!--<li><a href="#/roleAdd"><span class="am-icon-folder am-margin-left-sm"></span> P1 </a></li>-->
+						    <li class="am-panel">
+							    <a data-am-collapse="{parent: '#role-nav2', target: '#role-nav5'}">
+							        <i class="am-icon-folder am-margin-left-sm"></i> Plant2 <i class="am-icon-angle-right am-fr am-margin-right"></i>
+							    </a>
+							    <ul class="am-list am-collapse admin-sidebar-sub" id="role-nav5">
+							        <li><a href="#/roleAdd"><span class="am-icon-file am-margin-left-sm"></span> P8 </a></li>
+							        <li><a href="#/roleList/0"><span class="am-icon-file am-margin-left-sm"></span> P9 </a></li>
+							    </ul>
+							  </li>
+							  
+				        <li><a href="#/roleList/0"><span class="am-icon-folder am-margin-left-sm"></span> P2 </a></li>
+				    </ul>
+				  </li>
+				  
+				  <li class="am-panel">
+				    <a data-am-collapse="{parent: '#collapase-nav-1', target: '#role-nav3'}">
+				        <i class="am-icon-folder am-margin-left-sm"></i> Insect <i class="am-icon-angle-right am-fr am-margin-right"></i>
+				    </a>
+				    <ul class="am-list am-collapse admin-sidebar-sub" id="role-nav3">
+				        <li><a href="#/roleAdd"><span class="am-icon-file am-margin-left-sm"></span> P1 </a></li>
+				        <li><a href="#/roleList/0"><span class="am-icon-file am-margin-left-sm"></span> P2 </a></li>
+				    </ul>
+				  </li>
+				  <li class="am-panel">
+				    <a data-am-collapse="{parent: '#collapase-nav-1', target: '#role-nav4'}">
+				        <i class="am-icon-folder am-margin-left-sm"></i> Animal <i class="am-icon-angle-right am-fr am-margin-right"></i>
+				    </a>
+				    <ul class="am-list am-collapse admin-sidebar-sub" id="role-nav4">
+				        <li><a href="#/roleAdd"><span class="am-icon-file am-margin-left-sm"></span> P1 </a></li>
+				        <li><a href="#/roleList/0"><span class="am-icon-file am-margin-left-sm"></span> P2 </a></li>
+				    </ul>
+				  </li>
+				  
+				</ul>
+      </div>
+      <div class="am-u-sm-9">
+      	<div class="row am-cf">
+      		<h1 style="margin-bottom: 20px;">Name</h1>
+      		<h4 style="margin-top: 0px;"><span id="structureTitle">Crystal structure of the SIRV3 AcrID1 (gp02) anti-CRISPR protein</span></h4>
+      		<div class="am-tabs" data-am-tabs>
+  <ul class="am-tabs-nav am-nav am-nav-tabs">
+    <li class="am-active"><a href="#tab-4-1">Summary</a></li>
+    <li><a href="#tab-4-2">Structure</a></li>
+    <li><a href="#tab-4-3">Species</a></li>
+    <li><a href="#tab-4-4">Mechanism</a></li>
+  </ul>
+  <div class="am-tabs-bd am-tabs-bd-ofv">
+    <div class="am-tab-panel am-active" id="tab-4-1">
+	<table class="am-table am-table-striped">
+		<tbody>
+			<tr>
+				<td>Anti-CRISPR ID:</td>
+				<td>anti_CRISPR0001</td>
+			</tr>
+			<tr>
+				<td>Accession:</td>
+				<td>
+					<a href="https://www.ncbi.nlm.nih.gov/protein/YP_007392342.1">YP_007392342.1</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Anti-CRISPR type:</td>
+				<td>I-F</td>
+			</tr>
+			<tr>
+				<td>Family:</td>
+				<td>AcrF1</td>
+			</tr>
+			<tr>
+				<td>Organism:</td>
+				<td>Pseudomonas phage JBD30</td>
+			</tr>
+			<tr>
+				<td>Taxonomy:</td>
+				<td>Viruses;dsDNA viruses, no RNA stage;Caudovirales;Siphoviridae</td>
+			</tr>
+			<tr>
+				<td>Uniprot entry:</td>
+				<td>
+					<a href="http://www.uniprot.org/uniprot/L7P7M1">L7P7M1&nbsp;</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Uniprot entry name:</td>
+				<td>L7P7M1_9CAUD</td>
+			</tr>
+			<tr>
+				<td>Structure:</td>
+				<td>
+					<a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2LW5">2LW5&nbsp;</a>
+					<a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=5UZ9">5UZ9&nbsp;</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Interactor (DIP):</td>
+				<td>
+					<a href="http://dip.doe-mbi.ucla.edu/dip/Browse.cgi?ID=DIP-61767N">DIP-61767N</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Interactor (STRING):</td>
+				<td>--</td>
+			</tr>
+			<tr>
+				<td>Protein sequence:</td>
+				<td>MKFIKYLSTAHLNYMNIAVYENGSKIKARVENVVNGKSVGARDFDSTEQLESWFYGLPGSGLGRIENAMNEISRRENP</td>
+			</tr>
+			<tr>
+				<td>Length of sequence:</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td>Verified:</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td>Comments:</td>
+				<td>The protein inhibits the Type I-F CRISPR/Cas system in P. aeruginosa with high efficiency</td>
+			</tr>
+			<tr>
+				<td>Pubmed:</td>
+				<td>
+					<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=PMID: 23242138"> PMID: 23242138 <br> Bondy-Denomy, J., Pawluk, A., Maxwell, K.L. and Davidson, A.R. (2013) Bacteriophage genes that inactivate the CRISPR/Cas bacterial immune system. Nature, 493, 429-432.</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>   
+    </div>
+    <div class="am-tab-panel" id="tab-4-2">
+		<div class="carousel-header">Asymmetric Unit</div>
+		<img class="img-responsive center-block mainImage" src="https://cdn.rcsb.org/images/rutgers/ex/6exp/6exp.pdb-500.jpg">
+		<a class="btn btn-default btn-xs btn-enlargeImage" type="button" data-toggle="lightbox" data-gallery="multiimages0" href="https://cdn.rcsb.org/images/rutgers/ex/6exp/6exp.pdb-500.jpg" data-title=""><span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span></a>
+		<div class="clearfix"></div>
+		<div class="carousel-footer">
+			<p><i class="fa fa-cube">&nbsp;</i><strong>3D View</strong>:&nbsp;
+				<a href="/3d-view/6EXP/0">Structure</a> | <span class="propernoun"><a href="/3d-view/6EXP?preset=electronDensityMaps">Electron Density</a></span></p>
+			<hr>
+			<p><strong>Standalone Viewers &nbsp;</strong><br>
+				<a href="/pdb/explore/viewerLaunch.do?viewerType=PW&amp;structureId=6EXP&amp;unit=bio&amp;unit_id=0">Protein Workshop</a> |
+				<a href="/pdb/explore/viewerLaunch.do?viewerType=LX&amp;structureId=6EXP">Ligand Explorer</a>
+			</p>
+			<hr>
+			<p><strong>Standalone Viewers &nbsp;</strong><br>
+				<a href="/pdb/explore/viewerLaunch.do?viewerType=PW&amp;structureId=6EXP&amp;unit=bio&amp;unit_id=0">Protein Workshop</a> |
+				<a href="/pdb/explore/viewerLaunch.do?viewerType=LX&amp;structureId=6EXP">Ligand Explorer</a>
+			</p>
+			<hr><strong>Global Symmetry</strong>: Asymmetric - C1&nbsp;<span class="glyphicon glyphicon-info-sign hidden-xs hidden-sm hidden-md" aria-hidden="true" data-toggle="tooltip" data-placement="top" data-original-title="Point group symmetry for the biological assembly. Chains are considered equivalent when their sequence identities are above 95%."></span><br><strong>Global Stoichiometry</strong>: Homo 6-mer -&nbsp;<span style="word-wrap:break-word;">A6&nbsp;</span><span class="glyphicon glyphicon-info-sign hidden-xs hidden-sm hidden-md" aria-hidden="true" data-toggle="tooltip" data-placement="top" data-original-title="Chains with length below 5 residues or relatively short with respect to other chains are excluded from the stoichiometry and symmetry calculation."></span>
+			<hr><strong>Pseudo Symmetry</strong>: Asymmetric - C1&nbsp;<span class="glyphicon glyphicon-info-sign hidden-xs hidden-sm hidden-md" aria-hidden="true" data-toggle="tooltip" data-placement="top" data-original-title="Point group symmetry for the biological assembly. Chains are considered equivalent when their sequence identities are above 40% or their structures aligned with rmsd below 3 Angstroms."></span><br><strong>Pseudo Stoichiometry</strong>: Homo 6-mer -<span style="word-wrap:break-word;">A6&nbsp;</span><span class="glyphicon glyphicon-info-sign hidden-xs hidden-sm hidden-md" aria-hidden="true" data-toggle="tooltip" data-placement="top" data-original-title="Chains with length below 5 residues or relatively short with respect to other chains are excluded from the stoichiometry and symmetry calculation."></span></div>
+    </div>
+    <div class="am-tab-panel" id="tab-4-3">
+    	none
+    </div>
+    <div class="am-tab-panel" id="tab-4-4">
+    	none
+    </div>
+  </div>
+</div>
+	    </div>
+        
+      </div>
+   </div>
+  	</div>
+</div>
+
+
+<footer class="footer">
+  <div class="am-container">
+    <p>2018,CopyRight © College of Bioinformatics Science and Technology, Harbin Medical University, China.</p>
+  </div>
+</footer>
+
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="../static/js/jquery-2.1.0.js"></script>
+<!--<![endif]-->
+<script src="../static/js/amazeui.min.js"></script>
+<script src="../static/js/echarts.min.js"></script>
+</body>
+</html>
